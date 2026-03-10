@@ -24,14 +24,18 @@ func (spanishBot) getGreeting() string {
 
 type frenchBot struct{}
 
+func (frenchBot) getGreeting() string {
+	return "Bonjour!"
+}
+
 func main() {
 	eb := englishBot{}
 	sb := spanishBot{}
-	// fb := frenchBot{}
+	fb := frenchBot{}
 
 	printGreeting(eb)
 	printGreeting(sb)
-	// printGreeting(fb)
+	printGreeting(fb)
 }
 
 func printGreeting(b bot) {
